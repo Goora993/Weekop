@@ -13,7 +13,7 @@
 <body>
 <nav class = "navbar navbar-inverse navbar-fixed-top">
   <div class="container">
-    <a href="#" class="navbar-brand">Weekop</a>
+    <a href="index.jsp" class="navbar-brand">Weekop</a>
 
     <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
       <span class="glyphicon glyphicon-list"></span>
@@ -22,8 +22,9 @@
     <div class="collapse navbar-collapse navHeaderCollapse">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">Główna</a></li>
-        <li><a href="#">Dodaj</a></li>
-        <li><a href="#">Zaloguj się</a></li>
+        <li><a href="new.jsp">Dodaj</a></li>
+        <li><a href="login.jsp">Zaloguj się</a></li>
+        <li><a href="register.jsp">Zarejestruj się</a></li>
       </ul>
     </div>
 
