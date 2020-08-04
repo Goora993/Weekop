@@ -12,4 +12,5 @@ Utworzenie projektu:
   
 04/08/2020
   - Utworzenie szablonów poszczególnych stron aplikacji tj.: logowania, rejestracji i dodawania nowych projektów, wykorzystane zostały przy tym klasy Bootstrapa. W celu uwierzytelniania użytkownika zostanie wykorzystana funkcja Tomcata j_security_check,
-  - dodanie klas modelu danych będacych odpowiednikami elementów z bazy danych (User, Discovery, Vote oraz enum VoteType).
+  - dodanie klas modelu danych będacych odpowiednikami elementów z bazy danych (User, Discovery, Vote oraz enum VoteType),
+  - utworzenie podstawowego połączenia z bazą danych za pomocą klasy ConnectionProvider i pliku context.xml - docelowo łączenie z bazą danych będzie się odbywać za pomocą struktury DAO.
