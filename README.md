@@ -11,10 +11,14 @@ Technologie wykorzystane w tworzeniu aplikacji:
 - MySql
 - biblioteki Spring JDBC, JSTL, MySql Connector
 
+
+
 03/08/2020 Utworzenie projektu:
 - zaprojaktowanie i stworzenie bazy danych potrzebnej do funkcjonowania aplikacji,
 - dodanie bibliotek Spring JDBC, JSTL, MySql Connector oraz zasobów potrzebnych do działania Bootstrapa,
 - stworzenie strony głównej index.jsp.
+
+
 
 04/08/2020:
 - Utworzenie szablonów poszczególnych stron aplikacji tj.: logowania, rejestracji i dodawania nowych projektów, wykorzystane zostały przy tym klasy Bootstrapa. W celu uwierzytelniania użytkownika zostanie wykorzystana funkcja Tomcata j_security_check,
