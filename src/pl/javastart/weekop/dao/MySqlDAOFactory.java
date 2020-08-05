@@ -1,6 +1,6 @@
 package pl.javastart.weekop.dao;
 
-public class MySqlDaoFactory extends DAOFactory {
+public class MySqlDAOFactory extends DAOFactory {
 
     @Override
     public DiscoveryDAO getDiscoveryDao() {
