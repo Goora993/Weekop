@@ -21,7 +21,13 @@ Technologie wykorzystane w tworzeniu aplikacji:
 
 
 04/08/2020:
-- Utworzenie szablonów poszczególnych stron aplikacji tj.: logowania, rejestracji i dodawania nowych projektów, wykorzystane zostały przy tym klasy Bootstrapa. W celu uwierzytelniania użytkownika zostanie wykorzystana funkcja Tomcata j_security_check,
+- utworzenie szablonów poszczególnych stron aplikacji tj.: logowania, rejestracji i dodawania nowych projektów, wykorzystane zostały przy tym klasy Bootstrapa. W celu uwierzytelniania użytkownika zostanie wykorzystana funkcja Tomcata j_security_check,
 - dodanie klas modelu danych będacych odpowiednikami elementów z bazy danych (User, Discovery, Vote oraz enum VoteType),
 - utworzenie połączenia z bazą danych za pomocą klasy ConnectionProvider i pliku context.xml,
 - wykorzystanie wzorca projektowego DAO (Data Acces Object) i wprowadzenie go do projektu w celu usprawnienia połączenia aplikacji z bazą danych i stworzenia możliwości wykorzystania innego źródła danych w przyszłości.
+
+
+
+05/08/2020:
+- dodanie warsty serwisu w aplikacji aby oddzielić logikę aplikacji od klas odpowiedzialnych za połączenie z bazą danych,
+- dodanie funkcji rejestrowania użytkowników.
