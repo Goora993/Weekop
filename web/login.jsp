@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,8 +24,15 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="index.jsp">Główna</a></li>
                 <li><a href="new.jsp">Dodaj</a></li>
-                <li><a href="login.jsp">Zaloguj się</a></li>
-                <li><a href="register.jsp">Zarejestruj się</a></li>
+                <c:choose>
+                    <c:when test="${not empty sessionScope.user}">
+                        <li><a href="logout">Wyloguj się</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li><a href="login">Zaloguj się</a></li>
+                        <li><a href="register.jsp">Zarejestruj się</a></li>
+                    </c:otherwise>
+                </c:choose>
             </ul>
         </div>
 
@@ -36,7 +44,7 @@
         <form class="form-signin" action="j_security_check" method="post">
             <h2 class="form-signin-heading">Zaloguj się</h2>
             <input name="j_username" type="text" class="form-control" placeholder="Nazwa użytkownika" required autofocus>
-            <input name="j_passowrd" type="password" class="form-control" placeholder="Hasło" required>
+            <input name="j_password" type="password" class="form-control" placeholder="Hasło" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Zaloguj</button>
             <a href="register.jsp">Zarejestruj</a>
         </form>

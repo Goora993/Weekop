@@ -16,7 +16,7 @@
     <Realm
             className="org.apache.catalina.realm.DataSourceRealm"
             dataSourceName="jdbc/weekop"
-            userTable="user"
+            userTable="users"
             userNameCol="username"
             userCredCol="password"
             userRoleTable="user_role"
