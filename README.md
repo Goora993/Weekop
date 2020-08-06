@@ -31,3 +31,9 @@ Technologie wykorzystane w tworzeniu aplikacji:
 05/08/2020:
 - dodanie warsty serwisu w aplikacji aby oddzielić logikę aplikacji od klas odpowiedzialnych za połączenie z bazą danych,
 - dodanie funkcji rejestrowania użytkowników.
+
+
+
+06/08/2020:
+- dodanie funkcji logowania zarejestrownaych użytkowników,
+- dodanie serwletu filtrującego (LoginFilter.java), mającego na celu zezwalanie zalogowanym użytkownikom na dostęp do wyznaczonych w pliku web.xml elementów aplikacji.
