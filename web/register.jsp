@@ -14,7 +14,7 @@
 
 <nav class = "navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <a href="index.jsp" class="navbar-brand">Weekop</a>
+        <a href="./" class="navbar-brand">Weekop</a>
 
         <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
             <span class="glyphicon glyphicon-list"></span>
@@ -22,7 +22,7 @@
 
         <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="index.jsp">Główna</a></li>
+                <li class="active"><a href="./">Główna</a></li>
                 <li><a href="new.jsp">Dodaj</a></li>
                 <c:choose>
                     <c:when test="${not empty sessionScope.user}">
