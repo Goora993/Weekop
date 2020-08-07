@@ -37,3 +37,8 @@ Technologie wykorzystane w tworzeniu aplikacji:
 06/08/2020:
 - dodanie funkcji logowania zarejestrownaych użytkowników,
 - dodanie serwletu filtrującego (LoginFilter.java), mającego na celu zezwalanie zalogowanym użytkownikom na dostęp do wyznaczonych w pliku web.xml elementów aplikacji.
+
+
+
+07/08/2020:
+- dodanie funkcji dodawania nowych treści dla zalogowanych użytkowników,
