@@ -10,22 +10,21 @@ public class Discovery {
     private String url;
     private User user;
     private Timestamp timestamp;
-    private Vote upVote;
-    private Vote downVote;
+    private int upVote;
+    private int downVote;
 
     public Discovery() {
     }
 
-    public Discovery(long id, String name, String description, String url,
-                     User user, Timestamp timestamp, Vote upVote, Vote downVote) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.url = url;
-        this.user = user;
-        this.timestamp = timestamp;
-        this.upVote = upVote;
-        this.downVote = downVote;
+    public Discovery(Discovery discovery) {
+        this.id = discovery.id;
+        this.name = discovery.name;
+        this.description = discovery.description;
+        this.url = discovery.url;
+        this.timestamp = new Timestamp(discovery.timestamp.getTime());
+        this.user = new User(discovery.user);
+        this.upVote = discovery.upVote;
+        this.downVote = discovery.downVote;
     }
 
     public long getId() {
@@ -76,19 +75,19 @@ public class Discovery {
         this.timestamp = timestamp;
     }
 
-    public Vote getUpVote() {
+    public int getUpVote() {
         return upVote;
     }
 
-    public void setUpVote(Vote upVote) {
+    public void setUpVote(int upVote) {
         this.upVote = upVote;
     }
 
-    public Vote getDownVote() {
+    public int getDownVote() {
         return downVote;
     }
 
-    public void setDownVote(Vote downVote) {
+    public void setDownVote(int downVote) {
         this.downVote = downVote;
     }
 

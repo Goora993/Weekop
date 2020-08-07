@@ -41,7 +41,7 @@
 
 <div class="container">
     <div class="col-md-8 col-md-offset-2">
-        <form class="form-signin" method="post" action="new">
+        <form class="form-signin" method="post" action="add">
             <h2 class="form-signin-heading">Dodaj nowe znalezisko</h2>
             <input name="inputName" type="text" class="form-control" placeholder="Co dodajesz?"
                    required autofocus>
