@@ -14,12 +14,12 @@ public class Vote {
     public Vote() {
     }
 
-    public Vote(long id, long discovery_id, long user_id, Timestamp timestamp, VoteType voteType) {
-        this.id = id;
-        this.discovery_id = discovery_id;
-        this.user_id = user_id;
-        this.timestamp = timestamp;
-        this.voteType = voteType;
+    public Vote(Vote vote) {
+        this.id = vote.id;
+        this.discovery_id = vote.discovery_id;
+        this.user_id = vote.user_id;
+        this.timestamp = new Timestamp(vote.timestamp.getTime());
+        this.voteType= vote.voteType;
     }
 
     public long getId() {

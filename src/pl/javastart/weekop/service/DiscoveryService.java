@@ -42,4 +42,19 @@ public class DiscoveryService {
         }
         return discoveries;
     }
+
+    public Discovery getDiscoveryById(long discoveryId) {
+        DAOFactory factory = DAOFactory.getDAOFactory();
+        DiscoveryDAO discoveryDao = factory.getDiscoveryDao();
+        Discovery discovery = discoveryDao.read(discoveryId);
+        return discovery;
+    }
+
+    public boolean updateDiscovery(Discovery discovery) {
+        DAOFactory factory = DAOFactory.getDAOFactory();
+        DiscoveryDAO discoveryDao = factory.getDiscoveryDao();
+        boolean result = discoveryDao.update(discovery);
+        return result;
+    }
 }
+

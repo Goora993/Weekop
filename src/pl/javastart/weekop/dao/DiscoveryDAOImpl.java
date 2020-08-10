@@ -35,6 +35,12 @@ public class DiscoveryDAOImpl implements DiscoveryDAO {
             "SELECT users.user_id, username, email, is_active, password, " +
                     "discovery_id, name, description, url, date, up_vote, down_vote "
             + "FROM discovery LEFT JOIN users ON discovery.user_id=users.user_id;";
+    private static final String READ_DISCOVERY =
+            "SELECT users.user_id, username, email, is_active, password, discovery_id, name, description, url, date, up_vote, down_vote "
+                    + "FROM discovery LEFT JOIN users ON discovery.user_id=users.user_id WHERE discovery_id=:discovery_id;";
+    private static final String UPDATE_DISCOVERY =
+            "UPDATE discovery SET name=:name, description=:description, url=:url, user_id=:user_id, date=:date, up_vote=:up_vote, down_vote=:down_vote "
+                    + "WHERE discovery_id=:discovery_id;";
 
 
 
@@ -60,12 +66,29 @@ public class DiscoveryDAOImpl implements DiscoveryDAO {
 
     @Override
     public Discovery read(Long primaryKey) {
-        return null;
+        SqlParameterSource paramSource = new MapSqlParameterSource("discovery_id", primaryKey);
+        Discovery discovery = template.queryForObject(READ_DISCOVERY, paramSource, new DiscoveryRowMapper());
+        return discovery;
     }
 
     @Override
-    public boolean update(Discovery updateObject) {
-        return false;
+    public boolean update(Discovery discovery) {
+        boolean result = false;
+        Map<String, Object> paramMap = new HashMap<String, Object>();
+        paramMap.put("discovery_id", discovery.getId());
+        paramMap.put("name", discovery.getName());
+        paramMap.put("description", discovery.getDescription());
+        paramMap.put("url", discovery.getUrl());
+        paramMap.put("user_id", discovery.getUser().getId());
+        paramMap.put("date", discovery.getTimestamp());
+        paramMap.put("up_vote", discovery.getUpVote());
+        paramMap.put("down_vote", discovery.getDownVote());
+        SqlParameterSource paramSource = new MapSqlParameterSource(paramMap);
+        int update = template.update(UPDATE_DISCOVERY, paramSource);
+        if(update > 0) {
+            result = true;
+        }
+        return result;
     }
 
     @Override
