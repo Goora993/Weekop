@@ -42,3 +42,4 @@ Technologie wykorzystane w tworzeniu aplikacji:
 
 07/08/2020:
 - dodanie funkcji dodawania nowych treści dla zalogowanych użytkowników,
+- dodanie funkcji wyświatlania treści na stronie głównej na podstawie danych pobieranych z bazy danych przy pomocy pętli. 
