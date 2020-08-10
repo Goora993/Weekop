@@ -42,4 +42,13 @@ Technologie wykorzystane w tworzeniu aplikacji:
 
 07/08/2020:
 - dodanie funkcji dodawania nowych treści dla zalogowanych użytkowników,
+<<<<<<< HEAD
 - dodanie funkcji wyświatlania treści na stronie głównej na podstawie danych pobieranych z bazy danych przy pomocy pętli. 
+=======
+- dodanie funkcji wyświatlania treści na stronie głównej na podstawie danych pobieranych z bazy danych przy pomocy pętli.
+
+
+
+10/08/2020:
+- dodanie funkcji głosowania, wprowadzenie tej funkcji wymagało modyfikacji klas DiscoveryDAOImpl oras VoteDAOImpl oraz utworzenia serwletu odpowiedzialnego za właściwe, wspólne funkcjonowanie tych dwóch klas.
+>>>>>>> 81450edd987a3e47d471908b44347f5b4ee35daf
