@@ -12,32 +12,7 @@
 </head>
 <body>
 
-<nav class = "navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <a href="./" class="navbar-brand">Weekop</a>
-
-        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
-            <span class="glyphicon glyphicon-list"></span>
-        </button>
-
-        <div class="collapse navbar-collapse navHeaderCollapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="./">Główna</a></li>
-                <li><a href="new.jsp">Dodaj</a></li>
-                <c:choose>
-                    <c:when test="${not empty sessionScope.user}">
-                        <li><a href="logout">Wyloguj się</a></li>
-                    </c:when>
-                    <c:otherwise>
-                        <li><a href="login">Zaloguj się</a></li>
-                        <li><a href="register.jsp">Zarejestruj się</a></li>
-                    </c:otherwise>
-                </c:choose>
-            </ul>
-        </div>
-
-    </div>
-</nav>
+<jsp:include page="fragment/navbar.jspf" />
 
 <div class="container">
     <div class="col-sm-6 col-md-4 col-md-offset-4">
@@ -46,16 +21,12 @@
             <input name="j_username" type="text" class="form-control" placeholder="Nazwa użytkownika" required autofocus>
             <input name="j_password" type="password" class="form-control" placeholder="Hasło" required>
             <button class="btn btn-lg btn-primary btn-block" type="submit">Zaloguj</button>
-            <a href="register.jsp">Zarejestruj</a>
+            <a href="register">Zarejestruj</a>
         </form>
     </div>
 </div>
 
-<footer class="footer">
-    <div class="container">
-        <p class="navbar-text">Weekop - developed by Goora 2020</p>
-    </div>
-</footer>
+<jsp:include page="fragment/footer.jspf" />
 
 <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
