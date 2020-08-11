@@ -1,5 +1,6 @@
 package pl.javastart.weekop.service;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import pl.javastart.weekop.dao.DAOFactory;
 import pl.javastart.weekop.dao.UserDAO;
 import pl.javastart.weekop.model.User;
@@ -9,7 +10,8 @@ public class UserService {
         public void addUser(String username, String email, String password) {
             User user = new User();
             user.setUsername(username);
-            user.setPassword(password);
+            String md5Pass = encryptPassword(password);
+            user.setPassword(md5Pass);
             user.setEmail(email);
             user.setIs_active(true);
             DAOFactory factory = DAOFactory.getDAOFactory();
@@ -29,5 +31,10 @@ public class UserService {
         UserDAO userDao = factory.getUserDao();
         User user = userDao.getUserByUsername(username);
         return user;
+    }
+
+    private String encryptPassword(String password){
+        String md5Pass = DigestUtils.md5Hex(password);
+        return md5Pass;
     }
 }
