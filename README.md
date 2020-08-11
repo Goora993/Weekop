@@ -9,7 +9,7 @@ Technologie wykorzystane w tworzeniu aplikacji:
 - Bootstrap
 - Tomcat
 - MySql
-- biblioteki Spring JDBC, JSTL, MySql Connector
+- biblioteki Spring JDBC, JSTL, MySql Connector,  Apache Commons Codec.
 
 
 
@@ -53,5 +53,6 @@ Technologie wykorzystane w tworzeniu aplikacji:
 
 11/08/2020:
 - ukrycie stron .jsp w folderze WEB-INF w celu zmuszenia użytkownika do odwoływania się do nich poprzez klasy kontrolerów, zamiast bezpośrednio do stron .jsp,
-- wydzielenie powtarzających się fragmentów stron .jsp do oddzielnych plików .jspf i zaimplementowanie ich w kodzie plików .jsp. 
+- wydzielenie powtarzających się fragmentów stron .jsp do oddzielnych plików .jspf i zaimplementowanie ich w kodzie plików .jsp,
+- dodanie funkcji szyfrowania haseł przy pomocy algorytmu MD5, w tym celu w projekcie wykorzystano nową bibliotekę -  Apache Commons Codec.
 
