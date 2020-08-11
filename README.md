@@ -42,13 +42,16 @@ Technologie wykorzystane w tworzeniu aplikacji:
 
 07/08/2020:
 - dodanie funkcji dodawania nowych treści dla zalogowanych użytkowników,
-<<<<<<< HEAD
 - dodanie funkcji wyświatlania treści na stronie głównej na podstawie danych pobieranych z bazy danych przy pomocy pętli. 
-=======
-- dodanie funkcji wyświatlania treści na stronie głównej na podstawie danych pobieranych z bazy danych przy pomocy pętli.
 
 
 
 10/08/2020:
 - dodanie funkcji głosowania, wprowadzenie tej funkcji wymagało modyfikacji klas DiscoveryDAOImpl oras VoteDAOImpl oraz utworzenia serwletu odpowiedzialnego za właściwe, wspólne funkcjonowanie tych dwóch klas.
->>>>>>> 81450edd987a3e47d471908b44347f5b4ee35daf
+
+
+
+11/08/2020:
+- ukrycie stron .jsp w folderze WEB-INF w celu zmuszenia użytkownika do odwoływania się do nich poprzez klasy kontrolerów, zamiast bezpośrednio do stron .jsp,
+- wydzielenie powtarzających się fragmentów stron .jsp do oddzielnych plików .jspf i zaimplementowanie ich w kodzie plików .jsp. 
+
